@@ -17,7 +17,7 @@ export default function ValueProposition() {
         <div className="space-y-6 text-center w-full">
           <FadeInUp delay={0.1}>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              escore delivers instant access to live sports data without the
+              #API delivers instant access to live sports data without the
               clutter. No ads. No distractions. Just the scores, stats, and
               schedules you need, when you need them.
             </p>
@@ -25,7 +25,7 @@ export default function ValueProposition() {
 
           <FadeInUp delay={0.2}>
             <p className="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
-              Built for speed and reliability, escore ensures you're always up
+              Built for speed and reliability, #API ensures you're always up
               to date with real-time updates across all major sports and
               e-sports leagues.
             </p>

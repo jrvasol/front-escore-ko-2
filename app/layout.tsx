@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "escore - Live Sports Scores. Zero Delay.",
+  title: "#API - Live Sports Scores. Zero Delay.",
   description: "Real-time scores, schedules, stats, and rankings — all in one app. Get live sports data without the delay.",
 };
 

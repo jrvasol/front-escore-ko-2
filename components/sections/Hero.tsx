@@ -44,7 +44,7 @@ export default function Hero() {
           >
             <Image
               src={getAssetPath("/app-logo.png")}
-              alt="escore app logo"
+              alt="#API app logo"
               width={160}
               height={160}
               className="mx-auto h-32 w-32 sm:h-40 sm:w-40"

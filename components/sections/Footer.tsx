@@ -2,8 +2,6 @@
 
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
-import { getAssetPath } from "@/lib/basePath";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,13 +13,7 @@ export default function Footer() {
           {/* Logo and Company Info */}
           <div className="space-y-4">
             <div className="mb-4">
-              <Image
-                src={getAssetPath("/logo.png")}
-                alt="escore logo"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
-              />
+              <h2 className="text-2xl font-bold text-white">#API</h2>
             </div>
             <p className="text-gray-400 text-sm">
               Live sports scores. Zero delay. Get real-time updates across all major sports and e-sports.
