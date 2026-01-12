@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // If deploying to a subdirectory, set basePath
-  // basePath: process.env.NODE_ENV === 'production' ? '/front-escore-ko-2' : '',
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/front-escore-ko-2' : '',
+  // If deploying to a subdirectory, uncomment and set the basePath:
+  basePath: '/front-escore-ko-2',
+  trailingSlash: true,
 };
 
 export default nextConfig;
