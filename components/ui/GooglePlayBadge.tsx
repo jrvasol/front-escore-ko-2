@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/lib/basePath";
 import Image from "next/image";
 
 export default function GooglePlayBadge({
@@ -11,7 +12,7 @@ export default function GooglePlayBadge({
     >
       <div className="relative">
         <Image
-          src="/g-app.png"
+          src={getAssetPath("/g-app.png")}
           alt="Google Play icon"
           width={40}
           height={40}

@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/lib/basePath";
 import Image from "next/image";
 
 export default function AppStoreBadge({
@@ -11,7 +12,7 @@ export default function AppStoreBadge({
     >
       <div className="relative">
         <Image
-          src="/app-store.png"
+          src={getAssetPath("/app-store.png")}
           alt="App Store icon"
           width={40}
           height={40}

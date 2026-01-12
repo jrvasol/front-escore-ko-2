@@ -1,5 +1,6 @@
 "use client";
 
+import { getAssetPath } from "@/lib/basePath";
 import { motion } from "framer-motion";
 import AppStoreBadge from "../ui/AppStoreBadge";
 import GooglePlayBadge from "../ui/GooglePlayBadge";
@@ -16,7 +17,7 @@ export default function FinalCTA() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/footer-bg.mp4" type="video/mp4" />
+          <source src={getAssetPath("/footer-bg.mp4")} type="video/mp4" />
         </video>
 
         {/* Dark overlay for text readability */}

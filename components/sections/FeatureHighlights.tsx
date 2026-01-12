@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Activity, BarChart3, Calendar, Trophy } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/basePath";
 import FadeInUp from "../animations/FadeInUp";
 
 const features = [
@@ -79,7 +80,7 @@ export default function FeatureHighlights() {
                       className="relative rounded-2xl overflow-hidden"
                     >
                       <Image
-                        src={feature.image}
+                        src={getAssetPath(feature.image)}
                         alt={feature.title}
                         width={600}
                         height={1200}

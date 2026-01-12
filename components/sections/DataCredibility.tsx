@@ -1,24 +1,49 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import FadeInUp from "../animations/FadeInUp";
 
 const stats = [
-  { value: "10K+", label: "Matches Tracked", suffix: "K+", startValue: 0, endValue: 10 },
-  { value: "50+", label: "Sports & Leagues", suffix: "+", startValue: 0, endValue: 50 },
-  { value: "Real-time", label: "Data Updates", suffix: "", startValue: 0, endValue: 0, isText: true },
-  { value: "99.9%", label: "Uptime", suffix: "%", startValue: 0, endValue: 99.9 },
+  {
+    value: "10K+",
+    label: "Matches Tracked",
+    suffix: "K+",
+    startValue: 0,
+    endValue: 10,
+  },
+  {
+    value: "50+",
+    label: "Sports & Leagues",
+    suffix: "+",
+    startValue: 0,
+    endValue: 50,
+  },
+  {
+    value: "Real-time",
+    label: "Data Updates",
+    suffix: "",
+    startValue: 0,
+    endValue: 0,
+    isText: true,
+  },
+  {
+    value: "99.9%",
+    label: "Uptime",
+    suffix: "%",
+    startValue: 0,
+    endValue: 99.9,
+  },
 ];
 
-function AnimatedCounter({ 
-  endValue, 
-  suffix = "", 
+function AnimatedCounter({
+  endValue,
+  suffix = "",
   duration = 2,
-  isText = false 
-}: { 
-  endValue: number; 
-  suffix?: string; 
+  isText = false,
+}: {
+  endValue: number;
+  suffix?: string;
   duration?: number;
   isText?: boolean;
 }) {
@@ -28,24 +53,27 @@ function AnimatedCounter({
 
   useEffect(() => {
     if (!isInView || isText) return;
-    
+
     let startTime: number | null = null;
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-      
+      const progress = Math.min(
+        (currentTime - startTime) / (duration * 1000),
+        1
+      );
+
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const current = endValue * easeOutQuart;
-      
+
       setDisplayValue(current);
-      
+
       if (progress < 1) {
         requestAnimationFrame(animate);
       } else {
         setDisplayValue(endValue);
       }
     };
-    
+
     requestAnimationFrame(animate);
   }, [isInView, endValue, duration, isText]);
 
@@ -55,8 +83,8 @@ function AnimatedCounter({
 
   return (
     <span ref={ref}>
-      {endValue >= 100 
-        ? `${Math.floor(displayValue)}${suffix}` 
+      {endValue >= 100
+        ? `${Math.floor(displayValue)}${suffix}`
         : `${displayValue.toFixed(1)}${suffix}`}
     </span>
   );
@@ -73,10 +101,10 @@ export default function DataCredibility() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: index * 0.1,
-                  ease: [0.16, 1, 0.3, 1]
+                  ease: [0.16, 1, 0.3, 1],
                 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="text-center group cursor-default"
@@ -84,20 +112,20 @@ export default function DataCredibility() {
                 <div className="relative mb-4">
                   {/* Glow effect on hover */}
                   <div className="absolute inset-0 bg-[#c8ff01]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ 
-                      duration: 0.5, 
+                    transition={{
+                      duration: 0.5,
                       delay: index * 0.15,
                       type: "spring",
-                      stiffness: 100
+                      stiffness: 100,
                     }}
                     className="relative"
                   >
-                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#c8ff01] mb-2">
+                    <div className="text-xl sm:text-2xl md:text-4xl font-bold text-[#c8ff01] mb-2">
                       {stat.isText ? (
                         <motion.span
                           initial={{ opacity: 0 }}
@@ -108,14 +136,14 @@ export default function DataCredibility() {
                           Real-time
                         </motion.span>
                       ) : (
-                        <AnimatedCounter 
-                          endValue={stat.endValue} 
+                        <AnimatedCounter
+                          endValue={stat.endValue}
                           suffix={stat.suffix}
                           duration={2}
                         />
                       )}
                     </div>
-                    
+
                     {/* Animated underline */}
                     <motion.div
                       initial={{ width: 0 }}
@@ -125,13 +153,13 @@ export default function DataCredibility() {
                       className="h-0.5 bg-[#c8ff01] mx-auto mt-2"
                     />
                   </motion.div>
-                  
+
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.2 + 0.3 }}
-                    className="text-sm sm:text-base text-gray-400 uppercase tracking-wider mt-4"
+                    className="text-xs sm:text-base text-gray-400 uppercase tracking-wider mt-4"
                   >
                     {stat.label}
                   </motion.div>
@@ -142,7 +170,7 @@ export default function DataCredibility() {
         </div>
 
         {/* Animated divider lines */}
-        <motion.div 
+        <motion.div
           className="mt-16 sm:mt-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -176,25 +204,25 @@ export default function DataCredibility() {
                       <div key={i} className="h-px bg-gray-700"></div>
                     ))}
                   </div>
-                  
+
                   {[0.3, 0.6, 0.4, 0.8, 0.5, 0.7, 0.9, 0.6, 0.8, 1.0].map(
                     (height, index) => (
                       <motion.div
                         key={index}
                         initial={{ height: 0, opacity: 0 }}
-                        whileInView={{ 
+                        whileInView={{
                           height: `${height * 100}%`,
-                          opacity: 1
+                          opacity: 1,
                         }}
                         viewport={{ once: true }}
-                        transition={{ 
-                          duration: 0.8, 
+                        transition={{
+                          duration: 0.8,
                           delay: 0.7 + index * 0.05,
-                          ease: [0.16, 1, 0.3, 1]
+                          ease: [0.16, 1, 0.3, 1],
                         }}
-                        whileHover={{ 
+                        whileHover={{
                           scale: 1.1,
-                          filter: "brightness(1.2)"
+                          filter: "brightness(1.2)",
                         }}
                         className="flex-1 bg-gradient-to-t from-[#c8ff01]/30 via-[#c8ff01]/20 to-[#c8ff01]/40 rounded-t relative group cursor-pointer"
                       >

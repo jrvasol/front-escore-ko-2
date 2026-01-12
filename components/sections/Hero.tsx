@@ -1,5 +1,6 @@
 "use client";
 
+import { getAssetPath } from "@/lib/basePath";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AppStoreBadge from "../ui/AppStoreBadge";
@@ -18,7 +19,7 @@ export default function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/hero-banner.mp4" type="video/mp4" />
+          <source src={getAssetPath("/hero-banner.mp4")} type="video/mp4" />
         </video>
 
         {/* Dark overlay for text readability */}
@@ -42,7 +43,7 @@ export default function Hero() {
             className="mb-4"
           >
             <Image
-              src="/app-logo.png"
+              src={getAssetPath("/app-logo.png")}
               alt="escore app logo"
               width={160}
               height={160}
