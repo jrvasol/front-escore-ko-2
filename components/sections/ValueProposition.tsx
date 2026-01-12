@@ -10,7 +10,7 @@ export default function ValueProposition() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-12">
             Everything You Need.
             <br />
-            Nothing You Don't.
+            <span className="text-gray-500">Nothing You Don't.</span>
           </h2>
         </FadeInUp>
 
