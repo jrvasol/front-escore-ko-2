@@ -15,7 +15,7 @@ export default function FinalCTA() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-position-[50%_30%]"
         >
           <source src={getAssetPath("/footer-bg.mp4")} type="video/mp4" />
         </video>

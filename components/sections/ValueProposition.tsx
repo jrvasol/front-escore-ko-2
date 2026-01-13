@@ -25,9 +25,9 @@ export default function ValueProposition() {
 
           <FadeInUp delay={0.2}>
             <p className="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
-              Built for speed and reliability, #API ensures you're always up
-              to date with real-time updates across all major sports and
-              e-sports leagues.
+              Built for speed and reliability, #API ensures you're always up to
+              date with real-time updates across all major sports and e-sports
+              leagues.
             </p>
           </FadeInUp>
 

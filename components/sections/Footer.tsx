@@ -1,6 +1,8 @@
 "use client";
 
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { getAssetPath } from "@/lib/basePath";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -13,10 +15,17 @@ export default function Footer() {
           {/* Logo and Company Info */}
           <div className="space-y-4">
             <div className="mb-4">
-              <h2 className="text-2xl font-bold text-white">#API</h2>
+              <Image
+                src={getAssetPath("/logo.png")}
+                alt="#API logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm">
-              Live sports scores. Zero delay. Get real-time updates across all major sports and e-sports.
+              Live E-Sports scores. Zero delay. Get real-time updates across all
+              major sports and e-sports.
             </p>
           </div>
 
@@ -24,7 +33,7 @@ export default function Footer() {
           <div className="space-y-3 text-sm">
             <div>
               <p className="text-gray-500 mb-1">Company Name</p>
-              <p className="text-white">Example Corp Inc.</p>
+              <p className="text-white">#API</p>
             </div>
             <div>
               <p className="text-gray-500 mb-1">Representative</p>
@@ -52,8 +61,8 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-gray-500 mb-1">Email</p>
-              <a 
-                href="mailto:contact@example.com" 
+              <a
+                href="mailto:contact@example.com"
                 className="text-white hover:text-[#c8ff01] transition-colors"
               >
                 contact@example.com
@@ -61,8 +70,8 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-gray-500 mb-1">Phone</p>
-              <a 
-                href="tel:+15551234567" 
+              <a
+                href="tel:+15551234567"
                 className="text-white hover:text-[#c8ff01] transition-colors"
               >
                 +1 (555) 123-4567
@@ -116,7 +125,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
             <p className="text-gray-400 text-sm text-center sm:text-left">
-              © {currentYear} Example Corp Inc. All rights reserved.
+              © {currentYear} #API All rights reserved.
             </p>
             <div className="flex items-center space-x-4 text-sm">
               <Link

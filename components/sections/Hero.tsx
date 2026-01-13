@@ -59,7 +59,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6"
           >
-            Live Sports Scores.
+            Live E-Sports Scores.
             <br />
             <span className="text-[#c8ff01]">Zero Delay.</span>
           </motion.h1>
