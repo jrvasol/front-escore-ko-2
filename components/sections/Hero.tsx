@@ -3,9 +3,7 @@
 import { getAssetPath } from "@/lib/basePath";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import AppStoreBadge from "../ui/AppStoreBadge";
 import Button from "../ui/Button";
-import GooglePlayBadge from "../ui/GooglePlayBadge";
 
 export default function Hero() {
   return (
@@ -59,9 +57,9 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6"
           >
-            Live E-Sports Scores.
+            Real-Time E-Sports
             <br />
-            <span className="text-[#c8ff01]">Zero Delay.</span>
+            <span className="text-[#c8ff01]">Odds API</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -71,7 +69,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-8 text-pretty"
           >
-            Real-time scores, schedules, stats, and rankings — all in one app.
+            Scalable, reliable odds data for competitive E-Sports platforms.
           </motion.p>
 
           {/* CTAs */}
@@ -81,22 +79,13 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block transition-all"
+            <Button
+              href="#pricing"
+              variant="primary"
+              className="px-8 py-4 text-lg"
             >
-              <AppStoreBadge />
-            </motion.a>
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block transition-all"
-            >
-              <GooglePlayBadge />
-            </motion.a>
+              Get API Access
+            </Button>
           </motion.div>
 
           {/* Secondary CTA */}
@@ -106,11 +95,11 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <Button
-              href="#features"
+              href="#docs"
               variant="text"
               className="text-gray-400 hover:text-white"
             >
-              Explore Features
+              View Documentation
             </Button>
           </motion.div>
         </div>

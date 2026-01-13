@@ -2,8 +2,7 @@
 
 import { getAssetPath } from "@/lib/basePath";
 import { motion } from "framer-motion";
-import AppStoreBadge from "../ui/AppStoreBadge";
-import GooglePlayBadge from "../ui/GooglePlayBadge";
+import Button from "../ui/Button";
 
 export default function FinalCTA() {
   return (
@@ -37,7 +36,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"
         >
-          Never Miss a Moment.
+          Ready to Integrate?
         </motion.h2>
 
         <motion.p
@@ -47,7 +46,8 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto"
         >
-          Get real-time scores and stats wherever you are.
+          Start building with our reliable E-Sports odds API today. Get access
+          to real-time data and scale your platform with confidence.
         </motion.p>
 
         <motion.div
@@ -57,29 +57,20 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-            whileTap={{ scale: 0.95 }}
-            className="relative inline-block transition-all"
+          <Button
+            href="#pricing"
+            variant="primary"
+            className="px-8 py-4 text-lg"
           >
-            <div className="absolute -inset-2 bg-[#c8ff01] rounded-xl blur-xl opacity-30"></div>
-            <div className="relative">
-              <AppStoreBadge />
-            </div>
-          </motion.a>
-
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
-            whileTap={{ scale: 0.95 }}
-            className="relative inline-block transition-all"
+            Get API Access
+          </Button>
+          <Button
+            href="#docs"
+            variant="text"
+            className="text-gray-400 hover:text-white"
           >
-            <div className="absolute -inset-2 bg-[#c8ff01] rounded-xl blur-xl opacity-30"></div>
-            <div className="relative">
-              <GooglePlayBadge />
-            </div>
-          </motion.a>
+            View Documentation
+          </Button>
         </motion.div>
       </div>
     </section>

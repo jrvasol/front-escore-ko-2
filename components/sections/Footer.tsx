@@ -24,8 +24,9 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 text-sm">
-              Live E-Sports scores. Zero delay. Get real-time updates across all
-              major sports and e-sports.
+              Real-time E-Sports odds API for betting platforms, analytics
+              services, and gaming applications. Enterprise-grade reliability
+              and scalability.
             </p>
           </div>
 

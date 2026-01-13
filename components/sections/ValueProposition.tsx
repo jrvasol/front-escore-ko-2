@@ -8,33 +8,34 @@ export default function ValueProposition() {
       <div className="w-full max-w-4xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
         <FadeInUp>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-12">
-            Everything You Need.
+            Enterprise-Grade API.
             <br />
-            <span className="text-gray-500">Nothing You Don't.</span>
+            <span className="text-gray-500">Built for Scale.</span>
           </h2>
         </FadeInUp>
 
         <div className="space-y-6 text-center w-full">
           <FadeInUp delay={0.1}>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              #API delivers instant access to live sports data without the
-              clutter. No ads. No distractions. Just the scores, stats, and
-              schedules you need, when you need them.
+              Real-time odds delivery with ultra-low latency. Our infrastructure
+              is designed to handle millions of requests while maintaining
+              sub-100ms response times.
             </p>
           </FadeInUp>
 
           <FadeInUp delay={0.2}>
             <p className="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
-              Built for speed and reliability, #API ensures you're always up to
-              date with real-time updates across all major sports and e-sports
-              leagues.
+              Scalable architecture that grows with your platform.
+              Developer-friendly REST endpoints with comprehensive documentation
+              and dedicated support.
             </p>
           </FadeInUp>
 
           <FadeInUp delay={0.3}>
             <p className="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
-              Clean, intuitive design means you get the information you're
-              looking for in seconds — not minutes.
+              99.9% uptime SLA with reliable infrastructure built for
+              mission-critical betting platforms and e-sports analytics
+              services.
             </p>
           </FadeInUp>
         </div>
