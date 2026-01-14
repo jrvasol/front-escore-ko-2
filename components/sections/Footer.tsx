@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="mb-4">
               <Image
-                src={getAssetPath("/logo.png")}
+                src={getAssetPath("/logo-full.png")}
                 alt="#API logo"
                 width={120}
                 height={40}
