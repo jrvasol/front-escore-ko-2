@@ -67,7 +67,7 @@ export default function PricingTable() {
           {pricingTiers.map((tier, index) => (
             <FadeInUp key={tier.name} delay={index * 0.1}>
               <div
-                className={`relative rounded-2xl border transition-all duration-300 ${
+                className={`relative rounded-2xl border transition-all duration-300 h-full flex flex-col ${
                   tier.recommended
                     ? "bg-gray-900 border-[#c8ff01] shadow-[0_0_30px_rgba(200,255,1,0.1)] scale-105"
                     : "bg-gray-900 border-gray-800 hover:border-gray-700"
@@ -82,7 +82,7 @@ export default function PricingTable() {
                   </div>
                 )}
 
-                <div className="p-6 sm:p-8">
+                <div className="p-6 sm:p-8 flex flex-col flex-grow">
                   {/* Plan Name */}
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                     {tier.name}
@@ -103,7 +103,7 @@ export default function PricingTable() {
                   </div>
 
                   {/* Features List */}
-                  <div className="space-y-4 mb-8">
+                  <div className="space-y-4 mb-8 flex-grow">
                     <div className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-[#c8ff01] shrink-0 mt-0.5" />
                       <div>
@@ -152,7 +152,7 @@ export default function PricingTable() {
 
                     {tier.sla && (
                       <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-[#c8ff01] flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-[#c8ff01] shrink-0 mt-0.5" />
                         <div>
                           <span className="text-gray-300 font-medium">
                             {tier.sla}
@@ -166,7 +166,7 @@ export default function PricingTable() {
                   <Button
                     href={tier.ctaHref}
                     variant={tier.recommended ? "primary" : "secondary"}
-                    className="w-full py-3 text-center"
+                    className="w-full py-3 text-center mt-auto"
                   >
                     {tier.cta}
                   </Button>
