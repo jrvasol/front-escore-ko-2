@@ -6,24 +6,10 @@ import Button from "../ui/Button";
 
 const pricingTiers = [
   {
-    name: "Starter",
-    price: "$99",
-    period: "month",
-    requestLimit: "10K",
-    supportedGames: "5 games",
-    oddsType: "Pre-match only",
-    updateFrequency: "Every 5 minutes",
-    supportLevel: "Standard support",
-    sla: null,
-    cta: "Get API Access",
-    ctaHref: "#pricing",
-    recommended: false,
-  },
-  {
     name: "Pro",
-    price: "$299",
+    price: "$5000",
     period: "month",
-    requestLimit: "100K",
+    requestLimit: "Unlimited",
     supportedGames: "All games",
     oddsType: "Live + Pre-match",
     updateFrequency: "Real-time",
@@ -63,7 +49,7 @@ export default function PricingTable() {
           </p>
         </FadeInUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <FadeInUp key={tier.name} delay={index * 0.1}>
               <div
@@ -110,7 +96,9 @@ export default function PricingTable() {
                         <span className="text-gray-300 font-medium">
                           {tier.requestLimit}
                         </span>
-                        <span className="text-gray-500"> API requests</span>
+                        {tier.requestLimit !== "Unlimited" && (
+                          <span className="text-gray-500"> API requests</span>
+                        )}
                       </div>
                     </div>
 
