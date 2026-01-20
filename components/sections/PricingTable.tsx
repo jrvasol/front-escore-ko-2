@@ -7,7 +7,7 @@ import Button from "../ui/Button";
 const pricingTiers = [
   {
     name: "Pro",
-    price: "$5000",
+    price: "$5,000",
     period: "month",
     requestLimit: "Unlimited",
     supportedGames: "All games",
