@@ -41,11 +41,11 @@ export default function Hero() {
             className="mb-4"
           >
             <Image
-              src={getAssetPath("/app-logo.png")}
+              src={getAssetPath("/logo.png")}
               alt="#API app logo"
               width={160}
               height={160}
-              className="mx-auto h-32 w-32 sm:h-40 sm:w-40"
+              className="mx-auto h-20 w-20 sm:h-20 sm:w-20"
               priority
             />
           </motion.div>
